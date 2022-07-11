@@ -13,7 +13,7 @@ h2 {
     margin: 0;
 }
 
-.body_wrapper{
+.body_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +25,13 @@ h2 {
     text-transform: uppercase;
     border: 1px solid #4CB649;
     cursor: pointer;
+    background: white;
+    color: #4CB649;
+    font-weight: 600;
+    &:hover{
+        background: linear-gradient(#5DDF5A, #4CB649);
+        color: white;
+    }
 }
 
 @mixin text_par($f, $c, $w) {
@@ -168,26 +175,13 @@ h2 {
 
     & .log_in {
         @extend %button;
-        background: white;
-        color: #4CB649;
         width: 90px;
-        font-weight: 600;
-
-        &:hover {
-            background: rgb(249, 246, 240);
-        }
     }
 
     & .started {
         @extend %button;
-        background: linear-gradient(#5DDF5A, #4CB649);
-        color: white;
         width: 160px;
         font-weight: 600;
-
-        &:hover {
-            background: linear-gradient(#37cf34, #1c8718);
-        }
     }
 }
 
@@ -372,6 +366,7 @@ h2 {
         font-weight: light;
         padding-top: 0;
         line-height: 34px;
+        cursor: pointer;
     }
 }
 
@@ -405,12 +400,6 @@ h2 {
 .old_post {
     @extend %button;
     @include block_size(260px, 40px);
-    background: white;
-    color: #4CB649;
-
-    &:hover {
-        background: rgb(227, 220, 220);
-    }
 }
 
 .comment--img {
@@ -542,6 +531,7 @@ h2 {
                     position: relative;
                     display: flex;
                     justify-content: center;
+
                     &::after {
                         content: "";
                         margin-top: 24px;
@@ -552,56 +542,59 @@ h2 {
                     }
                 }
 
-                .price{
+                .price {
                     @include block_size(180px, 66px);
                     margin-top: 11%;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
-                    .current{
+
+                    .current {
                         height: 100%;
                         font-size: 24px;
                         position: relative;
                         bottom: 15px;
                     }
-                    .number_price{
+
+                    .number_price {
                         @include text_par(56px, #22252E, 200);
                     }
-                    .per_month{
+
+                    .per_month {
                         font-size: 24px;
                         position: relative;
                         top: 5px;
                     }
                 }
 
-                .price_line{
+                .price_line {
                     @include block_size(200px, 1px);
                     background: #EBECED;
                     margin-top: 8%;
                     margin-bottom: 8%;
                 }
 
-                .sub_price{
+                .sub_price {
                     width: 190px;
                     margin-top: 5px;
                     @include text_par(14px, #323642, 500);
                     text-align: center;
 
 
-                    .red_price{
-                        color:#F24458;
+                    .red_price {
+                        color: #F24458;
                         text-decoration: line-through;
                     }
 
-                    .bold_text{
+                    .bold_text {
                         margin-top: 12px;
                         text-align: center;
                         font-weight: bold;
                     }
                 }
 
-                .sub_price--1{
+                .sub_price--1 {
                     margin-top: 10%;
                 }
 
@@ -640,89 +633,184 @@ h2 {
         }
     }
 
-    .block_pay_way{
+    .block_pay_way {
         @include block_size(916px, 100px);
         display: flex;
         align-items: center;
         justify-content: space-between;
         @include text_par(18px, rgb(235, 228, 228), 200);
 
-        img{
+        img {
             cursor: pointer;
         }
     }
 
-    .how_to_pay{
+    .how_to_pay {
         @include block_size(450px, 18px);
         display: flex;
         flex-direction: row;
         align-items: center;
-        .text_arrow{
+
+        .text_arrow {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            p{
+            cursor: pointer;
+
+            p {
                 text-transform: uppercase;
                 @include text_par(14px, #4CB649, 500);
                 margin-right: 12px;
-                letter-spacing: .8px    
+                letter-spacing: .8px;
+
+                &:hover{
+                    color:rgb(20, 158, 20);
+                }
             }
 
-            .arrow_img{
+            .arrow_img {
                 @include block_size(15px, 10px);
                 background: url('./../image/Shape.png') no-repeat;
             }
         }
-        .text_arrow--1
-        {
+
+        .text_arrow--1 {
             margin-right: 50px;
         }
     }
 }
 
 //----------------FOOTER----------------------------
-.footer{
+
+ul {
+    margin-top: 25px;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        margin-bottom: 15px;
+        @include text_par(14px, #889099, 400);
+    }
+}
+
+.footer {
     @include block_size(1600px, 620px);
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 70px 200px 90px 200px;
-    
-    h1{
+
+    h1 {
         font-family: 'Mingzat', sans-serif;
-        @include text_par(27px, black, 500); 
+        @include text_par(27px, black, 500);
         margin-bottom: 58px;
     }
 
-    .wrap_info_footer{
+    .wrap_info_footer {
         @include block_size(1200px, 446px);
         display: flex;
         justify-content: space-between;
 
-        h2{
+        h2 {
             text-transform: uppercase;
             font-size: 14px;
         }
 
-        .company_info{
+        .company_info {
             width: 154px;
-            border: 2px solid green;
+
+
         }
 
-        .programs__learn_info{
+        .programs__learn_info {
             width: 164px;
-            border: 2px solid green;
+
+            .programs {
+                @include block_size(100%, 85px);
+                margin-bottom: 70px;
+
+                h2 {
+                    text-transform: uppercase;
+                }
+
+
+
+
+            }
+
         }
 
-        .legal{
-            width: 131px;
-            border: 2px solid green;
-        }
+        .block_legal_and_about {
+            width: 780px;
+            display: flex;
 
-        .about{
-            width: 600px;
-            border: 2px solid green;
+            .legal {
+                width: 131px;
+                margin-right: 69px;
+            }
+
+            .about {
+                width: 600px;
+                p {
+                    margin-top: 20px;
+                    @include text_par(14px, #889099, 500);
+                    line-height: 22px;
+                }
+
+                .about_subtext {
+                    line-height: 16px;
+                    font-size: 12px;
+                }
+            }
+
+
+            .social {
+                width: 333px;
+                margin-top: 40px;
+                h2 {
+                    margin-bottom: 20px;
+                }
+
+                .social_net{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .face{
+                        cursor: pointer;
+                        background: url('./../image/net/f.png') no-repeat;
+                        @include block_size(14px, 30px);
+                    }
+                    .twitter{
+                        cursor: pointer;
+                        background: url('./../image/net/twitter.png') no-repeat;
+                        @include block_size(28px, 23px);
+                    }
+                    .google{
+                        cursor: pointer;
+                        background: url('./../image/net/google.png') no-repeat;
+                        @include block_size(34px, 22px);
+                    }
+                    .in{
+                        cursor: pointer;
+                        background: url('./../image/net/in.png') no-repeat;
+                        @include block_size(28px, 28px);
+                    }
+                    .alien{
+                        cursor: pointer;
+                        background: url('./../image/net/2SL.png') no-repeat;
+                        @include block_size(30px, 30px);
+                    }
+                    
+                    .youtube{
+                        cursor: pointer;
+                        background: url('./../image/net/youtube.png') no-repeat;
+                        @include block_size(41.43px, 29px);
+                    }
+
+                }
+            }
+            
         }
     }
 }

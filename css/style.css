@@ -37,6 +37,15 @@ h2 {
   text-transform: uppercase;
   border: 1px solid #4CB649;
   cursor: pointer;
+  background: white;
+  color: #4CB649;
+  font-weight: 600;
+}
+
+.nav_button .log_in:hover, .nav_button .started:hover, .old_post:hover, .wrapper_pice .block_with_price .block_price .block_price_info .button_price:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5DDF5A), to(#4CB649));
+  background: linear-gradient(#5DDF5A, #4CB649);
+  color: white;
 }
 
 .header {
@@ -229,27 +238,12 @@ h2 {
 }
 
 .nav_button .log_in {
-  background: white;
-  color: #4CB649;
   width: 90px;
-  font-weight: 600;
-}
-
-.nav_button .log_in:hover {
-  background: #f9f6f0;
 }
 
 .nav_button .started {
-  background: -webkit-gradient(linear, left top, left bottom, from(#5DDF5A), to(#4CB649));
-  background: linear-gradient(#5DDF5A, #4CB649);
-  color: white;
   width: 160px;
   font-weight: 600;
-}
-
-.nav_button .started:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#37cf34), to(#1c8718));
-  background: linear-gradient(#37cf34, #1c8718);
 }
 
 .main_block {
@@ -495,6 +489,7 @@ h2 {
   font-weight: light;
   padding-top: 0;
   line-height: 34px;
+  cursor: pointer;
 }
 
 .art_sub--post {
@@ -537,12 +532,6 @@ h2 {
 .old_post {
   width: 260px;
   height: 40px;
-  background: white;
-  color: #4CB649;
-}
-
-.old_post:hover {
-  background: #e3dcdc;
 }
 
 .comment--img img {
@@ -903,6 +892,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
 }
 
 .wrapper_pice .how_to_pay .text_arrow p {
@@ -914,6 +904,10 @@ h2 {
   letter-spacing: .8px;
 }
 
+.wrapper_pice .how_to_pay .text_arrow p:hover {
+  color: #149e14;
+}
+
 .wrapper_pice .how_to_pay .text_arrow .arrow_img {
   width: 15px;
   height: 10px;
@@ -922,6 +916,19 @@ h2 {
 
 .wrapper_pice .how_to_pay .text_arrow--1 {
   margin-right: 50px;
+}
+
+ul {
+  margin-top: 25px;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #889099;
+  font-weight: 400;
 }
 
 .footer {
@@ -965,20 +972,110 @@ h2 {
 
 .footer .wrap_info_footer .company_info {
   width: 154px;
-  border: 2px solid green;
 }
 
 .footer .wrap_info_footer .programs__learn_info {
   width: 164px;
-  border: 2px solid green;
 }
 
-.footer .wrap_info_footer .legal {
+.footer .wrap_info_footer .programs__learn_info .programs {
+  width: 100%;
+  height: 85px;
+  margin-bottom: 70px;
+}
+
+.footer .wrap_info_footer .programs__learn_info .programs h2 {
+  text-transform: uppercase;
+}
+
+.footer .wrap_info_footer .block_legal_and_about {
+  width: 780px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .legal {
   width: 131px;
-  border: 2px solid green;
+  margin-right: 69px;
 }
 
-.footer .wrap_info_footer .about {
+.footer .wrap_info_footer .block_legal_and_about .about {
   width: 600px;
-  border: 2px solid green;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .about p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #889099;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .about .about_subtext {
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social {
+  width: 333px;
+  margin-top: 40px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social h2 {
+  margin-bottom: 20px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social .social_net {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social .social_net .face {
+  cursor: pointer;
+  background: url("./../image/net/f.png") no-repeat;
+  width: 14px;
+  height: 30px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social .social_net .twitter {
+  cursor: pointer;
+  background: url("./../image/net/twitter.png") no-repeat;
+  width: 28px;
+  height: 23px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social .social_net .google {
+  cursor: pointer;
+  background: url("./../image/net/google.png") no-repeat;
+  width: 34px;
+  height: 22px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social .social_net .in {
+  cursor: pointer;
+  background: url("./../image/net/in.png") no-repeat;
+  width: 28px;
+  height: 28px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social .social_net .alien {
+  cursor: pointer;
+  background: url("./../image/net/2SL.png") no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.footer .wrap_info_footer .block_legal_and_about .social .social_net .youtube {
+  cursor: pointer;
+  background: url("./../image/net/youtube.png") no-repeat;
+  width: 41.43px;
+  height: 29px;
 }
