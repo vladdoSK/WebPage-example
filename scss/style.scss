@@ -110,6 +110,7 @@ h2 {
 .navigation {
     padding: 40px 60px 20px 205.5px;
     display: flex;
+    box-sizing: border-box;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -490,6 +491,7 @@ h2 {
     margin-top: 70px;
     @include block_size(1600px, 800px);
     background: linear-gradient(#3D4251, #272B35);
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -509,6 +511,7 @@ h2 {
         flex-direction: row;
         justify-content: space-between;
         @include block_size(1180px, 380px);
+        box-sizing: border-box;
         align-items: center;
         margin-bottom: 30px;
 
@@ -797,6 +800,20 @@ h2 {
                     justify-content: space-between;
                     align-items: center;
 
+                    .first_net_three, .second_net_three{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .first_net_three{
+                        width: 140px;
+                    }
+
+                    .second_net_three{
+                        width: 162px;
+                    }
+
                     .face {
                         cursor: pointer;
                         background: url('./../image/net/f.png') no-repeat;
@@ -841,17 +858,22 @@ h2 {
 }
 
 
-@media (max-width:376px) {
+@media (max-width:413px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
     .header {
-        @include block_size(375px, 139px);
+        @include block_size(412px, 139px);
     }
 
     .warning {
-        @include block_size(375px, 68px);
+        @include block_size(412px, 68px);
     }
 
     .warning_group_mes {
-        @include block_size(375px, 68px);
+        @include block_size(412px, 68px);
         padding-left: 20px;
     }
 
@@ -873,7 +895,7 @@ h2 {
     }
 
     .close_warning {
-        margin-left: 342px;
+        margin-left: 372px;
         margin-top: -22px;
     }
 
@@ -882,13 +904,14 @@ h2 {
         padding: 15px 10px 15px 12px;
         align-items: center;
         display: inline-flex;
+        width: 412px;
     }
 
     .nav_block {
         margin-top: 140px;
         flex-direction: column;
         position: absolute;
-        width: 375px;
+        width: 412px;
         height: 150px;
         background: white;
         margin-left: -12px;
@@ -900,7 +923,7 @@ h2 {
         transition: .7s ease max-width;
 
         &.active {
-            max-width: 375px;
+            max-width: 412px;
             transition: .7s ease max-width;
         }
     }
@@ -913,7 +936,8 @@ h2 {
         position: relative;
         cursor: pointer;
         z-index: 1;
-
+        padding-left: 20px;
+        margin-right: 25px;
         &:hover {
 
             .burger,
@@ -989,6 +1013,7 @@ h2 {
         margin-left: 15px;
 
         h1 {
+            width: 200px;
             display: flex;
             flex-direction: row;
         }
@@ -1001,7 +1026,7 @@ h2 {
 
         & .started {
             width: 126px;
-            margin-left: 45px;
+            margin-left: 55px;
         }
     }
 
@@ -1061,9 +1086,10 @@ h2 {
     //-------------CENTRAL BLOCK-------------
 
     .central_block {
-        @include block_size(335px, 3380px);
+        @include block_size(412px, 3380px);
         flex-direction: column;
-        padding-left: 20px;
+        box-sizing: border-box;
+        padding-left: 50px;
         .left_side {
             width: 315px;
             height: 1700px;
@@ -1110,7 +1136,7 @@ h2 {
 
     .right_side{
         border: none;
-        @include block_size(375px, 1697px);
+        @include block_size(412px, 1697px);
         padding: 70px 20px 0 20px;
         position: relative;
 
@@ -1152,7 +1178,7 @@ h2 {
     //----------PRICE-------------------------------
 
     .wrapper_pice{
-        @include block_size(375px, 1700px);
+        @include block_size(412px, 1700px);
         padding-left: 30px;
         padding-right: 30px;
         h1{
@@ -1213,5 +1239,280 @@ h2 {
                 margin-right: 0px;
             }
         }
+    }
+
+    //------------FOOTER-----------------
+
+    .footer{
+        @include block_size(412px, 1080px);
+        box-sizing: border-box;
+        padding: 45px 30px 0 45px;
+
+        .wrap_info_footer{
+            position: relative;
+            width: 315px;
+
+            .programs__learn_info{
+                margin-right: -10px;
+                box-sizing: border-box;
+                padding-left: 15px;
+            }
+
+            .block_legal_and_about{
+                position: absolute;
+                width: 315px;
+                top:350px;
+
+                .about{
+                    width: 315px;
+                }
+
+                .social{
+                    position: absolute;
+                    width: 145px;
+                    top:-240px;
+                    left: 178px;
+
+                    .social_net{
+                        flex-direction: column;
+
+                        .first_net_three{
+                            margin-bottom: 25px;
+                            width: 143px;
+                        }
+    
+                        .second_net_three{
+                            width: 143px;
+                        }
+                    }
+                }
+
+                .about{
+                    position: absolute;
+                    top:200px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:376px) {
+    .header {
+        @include block_size(375px, 139px);
+    }
+
+    .warning {
+        @include block_size(375px, 68px);
+    }
+
+    .warning_group_mes {
+        @include block_size(375px, 68px);
+    }
+
+    .close_warning {
+        margin-left: 342px;
+    }
+
+    //------------NAVIGATION-------------------
+
+    .navigation{
+        width: 375px;
+    }
+
+    .nav_block {
+
+        width: 375px;
+
+        &.active {
+            max-width: 375px;
+            transition: .7s ease max-width;
+        }
+    }
+
+    .block_burger {
+        padding-left: 0px;
+        margin-right: 10px;
+    }
+
+    .burger {
+        display: block;
+        width: 24px;
+        height: 2px;
+
+        position: absolute;
+        background: black;
+        margin: auto;
+        align-items: center;
+
+        border-radius: 3px;
+
+        top: 6px;
+    }
+
+    .burger:after,
+    .burger::before {
+        content: "";
+        height: 2px;
+        width: 100%;
+        border-radius: 3px;
+
+        background: black;
+
+        position: absolute;
+        left: 0;
+        z-index: 1;
+    }
+
+    .burger:after {
+        bottom: -7px;
+
+    }
+
+    .burger:before {
+        top: -7px;
+    }
+
+
+
+
+    .company_name {
+        @include block_size(160px, 22px);
+        h1 {
+            width: 140px;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .nav_button {
+        & .log_in {
+            display: none;
+        }
+
+        & .started {
+            width: 126px;
+            margin-left: 40px;
+        }
+    }
+
+    //------------MAIN BLOCK--------------
+
+    .main_block {
+        padding: 30px 20px 0 20px;
+        box-sizing: border-box;
+    }
+
+    .article {
+        @include block_size(335px, 600px);
+        flex-direction: column;
+        border-radius: 6px;
+
+        img {
+            width: 335px;
+            height: 223px;
+        }
+
+        .img_art {
+            @include block_size(335px, 223px);
+        }
+
+        .art_description {
+            @include block_size(275px, 333px);
+            margin: 30px 30px 0px 30px;
+            padding: 0;
+        }
+
+    }
+
+    .text_art {
+        p {
+            padding-top: 0;
+        }
+    }
+
+    .art_sub {
+        @include block_size(259px, 81px);
+        margin-top: 14px;
+
+        .green {
+            font-size: 11px;
+        }
+    }
+
+    .comment {
+        img {
+            @include block_size(16px, 16px);
+        }
+    }
+
+    .tags_nav {
+        display: none;
+    }
+
+    //-------------CENTRAL BLOCK-------------
+
+    .central_block {
+        @include block_size(335px, 3380px);
+        flex-direction: column;
+        padding-left: 10px;
+        .left_side {
+            width: 315px;
+            height: 1700px;
+            h1 {
+                margin-top: 100px;
+                margin-bottom: 45px;
+            }
+
+            .post_block {
+                @include block_size(335px, 445px);
+                flex-direction: column;
+                .post_text {
+                    @include block_size(315px, 225px);
+                    margin-bottom: -40px;
+                    margin-top: -10px;
+                }
+
+                img{
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                } 
+
+                .post_img{
+                    width: 315px;
+                    height: 200px;
+                }
+
+            }
+
+            .line {
+                width: 315px;
+                margin: 0px 0 18px 0;
+            }
+        }
+
+        .half_post_2 {
+            display: none;
+        }
+
+    }
+
+
+    //------------ASIDE---------------
+
+    .right_side{
+        @include block_size(375px, 1697px);
+    }
+    
+    //----------PRICE-------------------------------
+
+    .wrapper_pice{
+        @include block_size(375px, 1700px);
+    }
+
+    //------------FOOTER-----------------
+
+    .footer{
+        @include block_size(375px, 1080px);
+        padding: 45px 30px 0 30px;
     }
 }
